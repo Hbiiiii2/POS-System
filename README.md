@@ -1,105 +1,105 @@
-# 🚀 Sistem Point of Sale (POS) Modern
+# 🚀 Sistem Point of Sale (POS) Modern  
+[![Lisensi MIT](https://img.shields.io/badge/Lisensi-MIT-blue.svg)](LICENSE)  
+![Laravel](https://img.shields.io/badge/Laravel-11-red?style=flat&logo=laravel)  
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-blue?style=flat&logo=tailwindcss)  
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange?style=flat&logo=mysql)  
 
-[![Lisensi MIT](https://img.shields.io/badge/Lisensi-MIT-blue.svg)](LICENSE)
+**Sistem POS Modern** adalah aplikasi berbasis web untuk membantu bisnis retail, kafe, dan usaha kecil dalam mengelola produk, transaksi, dan laporan penjualan.  
+Dibangun dengan **Laravel Jetstream** & **Tailwind CSS**, aplikasi ini responsif, cepat, dan mudah digunakan.  
 
-## Ikhtisar
+![📊 Cuplikan Layar Dasbor](Dashboard.jpg)  
 
-Sistem POS (Point of Sale) yang lengkap, responsif, dan mudah digunakan yang dibangun dengan **Laravel Jetstream** dan **Tailwind CSS**. Proyek ini menyediakan solusi komprehensif untuk mengelola inventaris, memproses transaksi, dan memantau kinerja bisnis dengan antarmuka yang modern dan intuitif.
+---
 
-![Cuplikan Layar Dasbor](Dashboard.jpg)
+## ✨ Fitur  
 
-## ✨ Fitur Utama
+- 🛒 **Manajemen Produk & Kategori** – Tambah/edit produk, atur stok, harga, dan kategori dengan mudah.  
+- 💳 **Antarmuka Kasir Cepat** – Proses transaksi dengan pembayaran via **Tunai, QRIS, Transfer**.  
+- 📜 **Manajemen Transaksi** – Riwayat lengkap, cetak ulang struk, ekspor data.  
+- 📈 **Laporan Lengkap** – Statistik penjualan harian, mingguan, bulanan, dan produk terlaris.  
+- 👥 **Role-based Access Control** – Admin, Kasir, Pemilik dengan hak akses berbeda.  
+- 📱 **UI Modern & Responsif** – Nyaman digunakan di desktop maupun mobile.  
 
-* **Manajemen Produk & Kategori:** Tambah, edit, dan hapus produk dan kategori dengan mudah. Kelola stok, harga, dan satuan untuk setiap produk.
-* **Antarmuka Kasir Intuitif:** Proses transaksi dengan cepat dan efisien. Tambahkan produk ke keranjang, kelola jumlah, dan terima berbagai metode pembayaran (Tunai, QRIS, Transfer).
-* **Manajemen Transaksi:** Lihat riwayat transaksi terperinci. Cetak ulang struk atau ekspor data untuk analisis lebih lanjut.
-* **Laporan Komprehensif:** Dapatkan wawasan berharga dengan laporan harian, mingguan, dan bulanan. Pantau total penjualan, jumlah transaksi, dan produk terlaris.
-* **Manajemen Pengguna Berbasis Peran:** Sistem ini dilengkapi dengan tiga peran pengguna yang telah ditentukan sebelumnya:
-    * **Admin:** Memiliki akses penuh ke semua fitur, termasuk manajemen produk dan kategori.
-    * **Kasir:** Dapat mengakses antarmuka POS untuk memproses transaksi.
-    * **Pemilik:** Dapat melihat laporan dan dasbor untuk memantau kinerja bisnis.
-* **Antarmuka Responsif & Modern:** Dibangun dengan Tailwind CSS, antarmuka pengguna dapat beradaptasi dengan berbagai ukuran layar, dari desktop hingga perangkat seluler.
+---
 
-## 🛠️ Tumpukan Teknologi
+## 🛠️ Teknologi  
 
-* **Backend:** Laravel 11, Laravel Jetstream
-* **Frontend:** Livewire, Tailwind CSS, Alpine.js
-* **Database:** MySQL (dapat disesuaikan)
-* **Lainnya:**
-    * `barryvdh/laravel-dompdf`: Untuk menghasilkan struk PDF.
-    * `mike42/escpos-php`: Untuk pencetakan struk termal (opsional).
+- **Backend:** Laravel 11 + Jetstream  
+- **Frontend:** Livewire, Tailwind CSS, Alpine.js  
+- **Database:** MySQL / MariaDB  
+- **Tambahan:**  
+  - `barryvdh/laravel-dompdf` → Cetak struk PDF  
+  - `mike42/escpos-php` → Cetak struk termal (opsional)  
 
-## 🚀 Memulai
+---
 
-### Prasyarat
+## 🚀 Instalasi  
 
-* PHP 8.2 atau lebih tinggi
-* Composer
-* Node.js & NPM
-* Server Database (misalnya, MySQL, MariaDB)
+### Prasyarat  
+- PHP **≥ 8.2**  
+- Composer  
+- Node.js & NPM  
+- MySQL / MariaDB  
 
-### Langkah-langkah Instalasi
+### Langkah-langkah  
 
-1.  **Kloning Repositori:**
-    ```bash
-    git clone [https://github.com/hbiiiii2/pos-system.git](https://github.com/hbiiiii2/pos-system.git)
-    cd pos-system
-    ```
+```bash
+# 1. Kloning repositori
+git clone https://github.com/hbiiiii2/pos-system.git
+cd pos-system
 
-2.  **Instal Dependensi:**
-    ```bash
-    composer install
-    npm install
-    ```
+# 2. Instal dependensi
+composer install
+npm install
 
-3.  **Konfigurasi Lingkungan:**
-    * Salin `.env.example` ke `.env`: `cp .env.example .env`
-    * Buat kunci aplikasi: `php artisan key:generate`
-    * Konfigurasikan koneksi database Anda di file `.env`:
-        ```
-        DB_CONNECTION=mysql
-        DB_HOST=127.0.0.1
-        DB_PORT=3306
-        DB_DATABASE=pos_system
-        DB_USERNAME=root
-        DB_PASSWORD=
-        ```
+# 3. Konfigurasi environment
+cp .env.example .env
+php artisan key:generate
+```
 
-4.  **Migrasi dan Seeding Database:**
-    Jalankan migrasi untuk membuat tabel database dan seeder untuk mengisi data awal (termasuk pengguna demo dan kategori).
-    ```bash
-    php artisan migrate --seed
-    ```
+Edit `.env` sesuai database:  
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=pos_system
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-5.  **Kompilasi Aset Frontend:**
-    ```bash
-    npm run dev
-    ```
+```bash
+# 4. Migrasi & Seeder
+php artisan migrate --seed
 
-6.  **Jalankan Server Pengembangan:**
-    ```bash
-    php artisan serve
-    ```
-    Aplikasi Anda sekarang akan berjalan di `http://127.0.0.1:8000`.
+# 5. Compile frontend
+npm run dev
 
-### Akun Demo
+# 6. Jalankan server
+php artisan serve
+```
 
-Setelah menjalankan seeder, Anda dapat masuk dengan akun-akun berikut:
+Akses: [http://127.0.0.1:8000](http://127.0.0.1:8000)  
 
-* **Admin:**
-    * **Email:** `admin@pos.com`
-    * **Kata Sandi:** `password`
-* **Kasir:**
-    * **Email:** `kasir@pos.com`
-    * **Kata Sandi:** `password`
-* **Pemilik:**
-    * **Email:** `owner@pos.com`
-    * **Kata Sandi:** `password`
+---
 
-## 🤝 Berkontribusi
+## 🔑 Akun Demo  
 
-Kontribusi dalam bentuk *pull request*, laporan bug, atau permintaan fitur sangat kami hargai. Silakan buka *issue* baru untuk mendiskusikan perubahan yang ingin Anda buat.
+- **Admin** → `admin@pos.com` | password: `password`  
+- **Kasir** → `kasir@pos.com` | password: `password`  
+- **Pemilik** → `owner@pos.com` | password: `password`  
 
-## 📄 Lisensi
+---
 
-Proyek ini dilisensikan di bawah **Lisensi MIT**. Lihat file [LICENSE](LICENSE) untuk detailnya.
+## 🤝 Kontribusi  
+
+1. Fork repo  
+2. Buat branch fitur: `git checkout -b fitur-baru`  
+3. Commit: `git commit -m "Tambah fitur X"`  
+4. Push & buka Pull Request  
+
+Kontribusi berupa PR, laporan bug, atau ide fitur sangat terbuka 🙌  
+
+---
+
+## 📄 Lisensi  
+Dirilis di bawah **MIT License** – lihat [LICENSE](LICENSE).  
