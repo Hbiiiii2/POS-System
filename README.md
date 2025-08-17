@@ -6,7 +6,7 @@
 
 Sistem POS (Point of Sale) yang lengkap, responsif, dan mudah digunakan yang dibangun dengan **Laravel Jetstream** dan **Tailwind CSS**. Proyek ini menyediakan solusi komprehensif untuk mengelola inventaris, memproses transaksi, dan memantau kinerja bisnis dengan antarmuka yang modern dan intuitif.
 
-![Cuplikan Layar Dasbor](https://raw.githubusercontent.com/hbiiiii2/pos-system/main/public/images/auth-image.jpg)
+![Cuplikan Layar Dasbor](https://raw.githubusercontent.com/hbiiiii2/pos-system/Dashboard.jpg)
 
 ## ✨ Fitur Utama
 
